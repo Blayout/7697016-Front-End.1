@@ -33,13 +33,20 @@ for (let i = 0; i < pieces.length; i++) {
     //Ajout des éléments au DOM pour l'exercice
     pieceElement.appendChild(descriptionElement);
     pieceElement.appendChild(stockElement);
+}
 
-    const boutonTrier = document.querySelector(".btn-trier");
-    boutonTrier.addEventListener("click", function () {
+const boutonTrier = document.querySelector(".btn-trier");
+boutonTrier.addEventListener("click", function () {
     pieces.sort(function (a, b) {
         return a.prix - b.prix;
     });
     console.log(pieces);
 });
- }
- 
+
+const boutonFiltrer = document.querySelector(".btn-filtrer");
+boutonFiltrer.addEventListener("click", function () {
+    const piecesFiltrees = pieces.filter(function (piece) {
+        return piece.prix <= 35;
+    });
+    console.log(piecesFiltrees);
+});
