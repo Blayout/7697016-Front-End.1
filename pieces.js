@@ -44,7 +44,6 @@ boutonTrier.addEventListener("click", function () {
     pieces.sort(function (a, b) {
         return a.prix - b.prix;
     });
-    console.log(pieces);
     for (let i = 0; i < pieces.length; i++) {
 
         const article = pieces[i];
