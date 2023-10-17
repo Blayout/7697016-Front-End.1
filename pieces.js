@@ -9,6 +9,7 @@ for (let i = 0; i < pieces.length; i++) {
     const sectionFiches = document.querySelector(".fiches");
     // Création d’une balise dédiée à une pièce automobile
     const pieceElement = document.createElement("article");
+  
     // Création des balises 
     const imageElement = document.createElement("img");
     imageElement.src = article.image;
@@ -25,7 +26,7 @@ for (let i = 0; i < pieces.length; i++) {
     
     // On rattache la balise article a la section Fiches
     sectionFiches.appendChild(pieceElement);
-    // On rattache l’image à pieceElement (la balise article)
+    // On rattache les variables à pieceElement (la balise article)
     pieceElement.appendChild(imageElement);
     pieceElement.appendChild(nomElement);
     pieceElement.appendChild(prixElement);
